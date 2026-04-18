@@ -44,10 +44,14 @@ YouTubeManager es una aplicación de línea de comandos (CLI) desarrollada en Py
 1. Crea un archivo `.env` en la raíz del proyecto:
    ```env
    YOUTUBE_API_KEY=tu_clave_de_api_de_youtube
-   GROQ_API_KEY=tu_clave_groq_opcional
    ```
 
-2. Obtén una `YOUTUBE_API_KEY` desde la [Consola de Google Cloud](https://console.cloud.google.com/):
+2. Para la función IA opcional, crea otro archivo `.env` en `youtubemanager/bot/`:
+   ```env
+   GROQ_API_KEY=tu_clave_groq
+   ```
+
+3. Obtén una `YOUTUBE_API_KEY` desde la [Consola de Google Cloud](https://console.cloud.google.com/):
    - Crea un proyecto.
    - Activa la API de YouTube Data v3.
    - Genera una clave de API.

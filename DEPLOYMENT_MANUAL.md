@@ -37,10 +37,12 @@ Crea un archivo `.env` en la raíz del proyecto con al menos:
 YOUTUBE_API_KEY=tu_clave_de_api_de_youtube
 ```
 
-Opcionalmente, para usar la función IA:
+Opcionalmente, para usar la función IA, crea otro archivo `.env` en la carpeta `bot/bot/src/paquete/` con:
 ```env
 GROQ_API_KEY=tu_clave_groq
 ```
+
+Nota: Mantén los archivos `.env` separados para evitar confusiones entre las claves de diferentes servicios.
 
 ## 6. Configuración opcional de la IA
 Si deseas cambiar el modelo de IA usado por Groq API (por defecto es `llama-3.1-8b-instant`):
@@ -52,8 +54,8 @@ Nota: Asegúrate de que el modelo elegido sea compatible con la API de OpenAI us
 
 ## 7. Verificación previa al despliegue
 - Asegúrate de que las rutas a Firefox y VLC son correctas.
-- Comprueba que el archivo `.env` existe y contiene la clave `YOUTUBE_API_KEY`.
-- Si usas IA, verifica también `GROQ_API_KEY`.
+- Comprueba que el archivo `.env` en la raíz existe y contiene la clave `YOUTUBE_API_KEY`.
+- Si usas IA, verifica que el archivo `.env` en `bot/bot/src/paquete/` existe y contiene `GROQ_API_KEY`.
 
 ## 8. Cómo generar una API Key de YouTube
 1. Abre la Consola de Google Cloud: https://console.cloud.google.com/
