@@ -1,0 +1,73 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Entornos virtuales
+# =========================
+venv/
+env/
+.venv/
+bin/
+lib/
+include/
+pyvenv.cfg
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Datos generados en runtime
+# =========================
+data/*.json
+playlist.txt
+historial.json
+
+# Descargas de vídeos
+descargas_youtube/
+*.webm
+*.mp4
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos temporales de Office
+# =========================
+~$*
+
+# =========================
+# Configuración sensible
+# =========================
+.env
+
+# =========================
+# Build y distribución
+# =========================
+build/
+dist/
+*.spec
+
+# =========================
+# PyInstaller / build
+# =========================
+build/
+dist/
+*.spec

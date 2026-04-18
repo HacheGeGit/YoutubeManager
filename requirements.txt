@@ -1,0 +1,6 @@
+certifi==2023.7.22
+google_api_python_client==2.96.0
+openai==2.32.0
+PyAutoGUI==0.9.54
+python-dotenv==1.2.2
+yt_dlp==2026.3.17
