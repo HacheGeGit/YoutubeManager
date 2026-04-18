@@ -42,12 +42,20 @@ Opcionalmente, para usar la función IA:
 GROQ_API_KEY=tu_clave_groq
 ```
 
-## 6. Verificación previa al despliegue
+## 6. Configuración opcional de la IA
+Si deseas cambiar el modelo de IA usado por Groq API (por defecto es `llama-3.1-8b-instant`):
+1. Edita el archivo `bot/bot/src/paquete/chatbot.py`.
+2. En la línea donde se define `model = "llama-3.1-8b-instant"`, cambia el valor por otro modelo soportado por Groq (ej. `mixtral-8x7b-32768` o `gemma-7b-it`).
+3. Consulta la documentación de Groq para ver modelos disponibles: https://console.groq.com/docs/models
+
+Nota: Asegúrate de que el modelo elegido sea compatible con la API de OpenAI usada en el código.
+
+## 7. Verificación previa al despliegue
 - Asegúrate de que las rutas a Firefox y VLC son correctas.
 - Comprueba que el archivo `.env` existe y contiene la clave `YOUTUBE_API_KEY`.
 - Si usas IA, verifica también `GROQ_API_KEY`.
 
-## 7. Cómo generar una API Key de YouTube
+## 8. Cómo generar una API Key de YouTube
 1. Abre la Consola de Google Cloud: https://console.cloud.google.com/
 2. Crea o selecciona un proyecto existente.
 3. Activa la API de YouTube Data v3.
@@ -58,24 +66,24 @@ GROQ_API_KEY=tu_clave_groq
 Ayuda adicional:
 - Documentación de Google Cloud: https://developers.google.com/youtube/v3
 
-## 8. Ejecución del proyecto
+## 9. Ejecución del proyecto
 Desde la carpeta raíz del proyecto, ejecuta:
 ```bash
 python main.py
 ```
 
-## 9. Consideraciones de producción
+## 10. Consideraciones de producción
 - La aplicación se ejecuta como programa de consola; no hay servidor web.
 - Protege las claves en `.env` y evita subirlas a repositorios públicos.
 - Concede permisos a `pyautogui` si macOS solicita acceso para automatización.
 - Revisa las rutas de aplicaciones macOS si el usuario tiene instalación en ubicaciones distintas.
 
-## 10. Directorios clave
+## 11. Directorios clave
 - `data/playlist.txt`: playlist local de URLs de YouTube.
 - `data/historial.json`: historial de reproducción.
 - `utils/descargas_youtube`: carpeta donde se guardan los vídeos descargados.
 
-## 11. Tareas comunes de despliegue
+## 12. Tareas comunes de despliegue
 1. Instalar Python y las aplicaciones necesarias.
 2. Crear y activar entorno virtual.
 3. Instalar dependencias.
@@ -83,7 +91,7 @@ python main.py
 5. Ejecutar `python main.py`.
 6. Probar las opciones del menú para confirmar que Firefox y VLC se lancen correctamente.
 
-## 12. Notas finales
+## 13. Notas finales
 - Este proyecto está pensado para uso local en macOS.
 - No incluye un flujo de despliegue a servidores ni contenedores.
 - Para ejecutar en otro sistema operativo, adapta las rutas a Firefox y VLC manualmente.
