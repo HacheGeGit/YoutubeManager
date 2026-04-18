@@ -33,6 +33,7 @@ logs/
 # =========================
 # Datos generados en runtime
 # =========================
+!data/
 data/*.json
 playlist.txt
 historial.json
